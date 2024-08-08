@@ -1,10 +1,24 @@
-function Home() {
+import { useNavigate, Link } from 'react-router-dom'
+
+
+const Home = () => {
+    let navigate = useNavigate()
     return (
-        <>
-            <h1>Eu sou o samba</h1>
-            <h2>A voz do morro, sou eu mesmo sim sehor</h2>
-            <img src="https://media.licdn.com/dms/image/D4D03AQG54VxeJIRnfg/profile-displayphoto-shrink_800_800/0/1719343721747?e=1728518400&v=beta&t=ggHbQWfIYH6QfOM6hlu2q3Re7jP3bnJpH6TH0eJFXrE" alt="" />
-        </>
+
+        <div className='v-96'>
+            <h2 className="text-slate-900 text-5xl  m-4">Home</h2>
+            <div>
+                <button type='submit'
+                    className='hover:underline mx-4'
+                    onClick={() => { navigate('/login') }}>
+                    
+                </button>
+                <Link to='/login' className='hover:underline mx-4'></Link>
+            </div>
+
+        </div>
+
     )
 }
-export default Home;
+
+export default Home
